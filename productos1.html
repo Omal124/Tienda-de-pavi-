@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda de Botanas</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f6f8;
+}
+
+/* ENCABEZADO */
+header {
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* NAV */
+nav {
+    background: #222;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* PRODUCTOS */
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.producto {
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: white;
+}
+
+.precio {
+    color: #e53935;
+    font-weight: bold;
+}
+
+button {
+    background: #ff5722;
+    border: none;
+    padding: 8px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e64a19;
+}
+
+/* CARRITO */
+.carrito {
+    margin: 25px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        justify-content: center;
+    }
+}
+</style>
+
+
+</head>
+<body>
+
+<header>
+    <h1>Tienda de Botanas</h1>
+    <p>Compra tus botanas favoritas de forma fácil y rápida</p>
+</header>
+
+<nav>
+    <a href="index.html">Volver</a>
+</nav>
+
+<main> <!-- 👈 AQUÍ EMPIEZA -->
+
+<section id="sabritas">
+    <h2>Productos de Sabritas</h2>
+
+    <div class="contenedor">
+
+        <article class="producto">
+            <img src="IMG/Limon.jpeg" alt="Ruffles Queso">
+            <h3>Sabritas Limón</h3>
+            <p class="precio">$20</p>
+            <button onclick="comprar('Sabritas Limón',20)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Jalapeño.jpeg" alt="Ruffles Queso">
+            <h3>Sabritas Jalapeño</h3>
+            <p class="precio">$20</p>
+            <button onclick="comprar('Sabritas Jalapeño',20)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Adobadas.jpeg" alt="Ruffles Queso">
+            <h3>Sabritas Adobadas</h3>
+            <p class="precio">$20</p>
+            <button onclick="comprar('Sabritas Adobadas',20)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Flamin’ Hot.jpeg" alt="Ruffles Queso">
+            <h3>Sabritas Flamin’ Hot</h3>
+            <p class="precio">$20</p>
+            <button onclick="comprar('Sabritas Flamin’ Hot',20)">Agregar al carrito</button>
+        </article>
+
+    </div>
+</section>
+
+
+<section id="doritos">
+    <h2>Productos  de Doritos</h2>
+
+    <div class="contenedor">
+
+        <article class="producto">
+            <img src="IMG/Doritos Flamin’ Hot.jpeg" alt="Ruffles Queso">
+            <h3>Doritos Flamin’ Hot</h3>
+            <p class="precio">$20</p>
+            <button onclick="comprar('Doritos Flamin’ Hot',20)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Dinamita Chile Limón.jpeg" alt="Ruffles Queso">
+            <h3>Doritos Dinamita Chile Limón</h3>
+            <p class="precio">$20</p>
+            <button onclick="comprar('Doritos Dinamita Chile Limón',20)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Incógnita.jpeg" alt="Ruffles Queso">
+            <h3>Doritos Incógnita</h3>
+            <p class="precio">$20</p>
+            <button onclick="comprar('Doritos Incógnita',20)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Salsa Verde.jpeg" alt="Ruffles Queso">
+            <h3>Doritos Salsa Verde</h3>
+            <p class="precio">$20</p>
+            <button onclick="comprar('Doritos Salsa Verde',20)">Agregar al carrito</button>
+        </article>
+
+    </div>
+</section>
+
+
+<section id="tostitos">
+    <h2>Productos de Tostitos</h2>
+
+    <div class="contenedor">
+
+        <article class="producto">
+            <img src="IMG/Tostitos Nacho Cheese.jpeg" alt="Ruffles Queso">
+            <h3>Tostitos Nacho Cheese</h3>
+            <p class="precio">$18</p>
+            <button onclick="comprar('Tostitos Nacho Cheese',18)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Tostitos Flamin’ Hot.jpeg" alt="Ruffles Queso">
+            <h3>Tostitos Flamin’ Hot</h3>
+            <p class="precio">$18</p>
+            <button onclick="comprar('Tostitos Flamin’ Hot',18)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Tostitos Totopos Horneados.jpeg" alt="Ruffles Queso">
+            <h3>Tostitos Totopos Horneados</h3>
+            <p class="precio">$18</p>
+            <button onclick="comprar('Tostitos Totopos Horneados',18)">Agregar al carrito</button>
+        </article>
+
+    </div>
+</section>
+
+
+<section id="cheetos">
+    <h2>Productos de Cheetos</h2>
+
+    <div class="contenedor">
+
+        <article class="producto">
+            <img src="IMG/Cheetos Torciditos.jpeg" alt="Ruffles Queso">
+            <h3>Cheetos Torciditos</h3>
+            <p class="precio">$17</p>
+            <button onclick="comprar('Cheetos Torciditos',17)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Cheetos Crunchy.jpeg" alt="Ruffles Queso">
+            <h3>Cheetos Crunchy</h3>
+            <p class="precio">$17</p>
+            <button onclick="comprar('Cheetos Crunchy',17)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Cheetos Bolitas.jpeg" alt="Ruffles Queso">
+            <h3>Cheetos Bolitas</h3>
+            <p class="precio">$17</p>
+            <button onclick="comprar('Cheetos Bolitas',17)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Cheetos Poffs.jpeg" alt="Ruffles Queso">
+            <h3>Cheetos Poffs</h3>
+            <p class="precio">$17</p>
+            <button onclick="comprar('Cheetos Poffs',17)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Cheetos Mix.jpeg" alt="Ruffles Queso">
+            <h3>Cheetos Mix</h3>
+            <p class="precio">$17</p>
+            <button onclick="comprar('Cheetos Mix',17)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Cheetos Jalapeño.jpeg" alt="Ruffles Queso">
+            <h3>Cheetos Jalapeño</h3>
+            <p class="precio">$17</p>
+            <button onclick="comprar('Cheetos Jalapeño',17)">Agregar al carrito</button>
+        </article>
+
+
+    </div>
+</section>
+
+<section id="ruffles">
+    <h2>Productos de Ruffles</h2>
+
+    <div class="contenedor">
+
+        <article class="producto">
+            <img src="IMG/Ruffles Jamón.jpeg" alt="Ruffles Queso">
+            <h3>Ruffles Jamón</h3>
+            <p class="precio">$19</p>
+            <button onclick="comprar('Ruffles Jamón',19)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Ruffles Salsa Roja.jpeg" alt="Ruffles Queso">
+            <h3>Ruffles Salsa Roja</h3>
+            <p class="precio">$19</p>
+            <button onclick="comprar('Ruffles Salsa Roja',19)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Ruffles Fuego.jpeg" alt="Ruffles Queso">
+            <h3>Ruffles Fuego</h3>
+            <p class="precio">$19</p>
+            <button onclick="comprar('Ruffles Fuego',19)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Ruffles Naturales.jpeg" alt="Ruffles Queso">
+            <h3>Ruffles Naturales</h3>
+            <p class="precio">$19</p>
+            <button onclick="comprar('Ruffles Naturales',19)">Agregar al carrito</button>
+        </article>
+
+    </div>
+</section>
+
+<section>
+    <h2>Sobre la tienda</h2>
+    <p>Somos una tienda dedicada a ofrecer botanas a precios accesibles, brindando una experiencia de compra sencilla y clara.</p>
+</section> <!-- 👈 FALTABA ESTO -->
+
+<section id="carrito">
+    <h2>Carrito de compras</h2>
+
+    <div class="carrito">
+        <ul id="lista"></ul>
+        <h3>Total: $<span id="total">0</span></h3>
+
+        <button onclick="vaciarCarrito()">Vaciar carrito</button>
+    </div>
+</section>
+
+</main> <!-- 👈 ESTE ES EL CIERRE QUE TE FALTABA -->
+<footer>
+    <p>Contacto: botanas@email.com</p>
+    <p>&copy; 2026 Tienda de Botanas</p>
+</footer>
+
+<script>
+let total = 0;
+
+function comprar(nombre, precio) {
+    const lista = document.getElementById("lista");
+    const totalSpan = document.getElementById("total");
+
+    const item = document.createElement("li");
+    item.textContent = nombre + " - $" + precio;
+
+    lista.appendChild(item);
+
+    total += precio;
+    totalSpan.textContent = total;
+}
+
+function vaciarCarrito() {
+    document.getElementById("lista").innerHTML = "";
+    total = 0;
+    document.getElementById("total").textContent = total;
+}
+
+
+</script>
+</body>
+</html>

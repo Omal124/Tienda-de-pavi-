@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda PAVI - Inicio</title>
+
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TIPOGRAFÍA */
+body {
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 1.5;
+    background: #f3f4f6;
+}
+
+/* HEADER */
+header {
+    background: black;
+    color: #22c55e;
+    text-align: center;
+    padding: 20px;
+}
+
+/* NAV FLEXBOX */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background: #111;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* IMÁGENES */
+.producto img {
+    width: 20%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* BOTÓN */
+button {
+    background: #22c55e;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #16a34a;
+}
+
+/* ESPACIADO */
+section {
+    margin-bottom: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="IMG/logo.png" alt="Logo de Tienda PAVI" style="width:200px;">
+    <h1>Tienda PAVI</h1>
+    <p>Bienvenido a nuestra tienda en línea donde encontrarás productos de calidad al mejor precio.</p>
+</header>
+
+<nav>
+    <a href="productos1.html">Productos</a>
+    <a href="contacto.html">Contacto</a>
+</nav>
+
+<main>
+
+<section>
+    <h2>Variedad de Sabritas</h2>
+    <p>Descubre todos los productos y sabores disponibles de Sabritas.</p>
+
+    <div class="productos">
+
+        <article class="producto">
+            <img src="IMG/Sabritas Original.jpeg" alt="Papas Sabritas Original">
+            <h3>Sabritas Original</h3>
+            <p>El clásico que nunca falla.</p>
+            <button onclick="alert('Sabritas Original')">Ver más</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Doritos.jpeg" alt="Doritos Nacho Queso">
+            <h3>Doritos Nacho Queso</h3>
+            <p>Sabor intenso que no se olvida.</p>
+            <button onclick="alert('Doritos Nacho Queso')">Ver más</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Tostitos.jpeg" alt="Tostitos Original">
+            <h3>Tostitos Original</h3>
+            <p>Crujientes y perfectos para compartir.</p>
+            <button onclick="alert('Tostitos Original')">Ver más</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Cheetos.jpeg" alt="Cheetos Flamin Hot">
+            <h3>Cheetos Flamin’ Hot</h3>
+            <p>Fuego y sabor en cada bocado.</p>
+            <button onclick="alert('Cheetos Flamin Hot')">Ver más</button>
+        </article>
+
+        <article class="producto">
+            <img src="IMG/Ruffles.jpeg" alt="Ruffles Queso">
+            <h3>Ruffles Queso</h3>
+            <p>Más crunch en cada mordida.</p>
+            <button onclick="alert('Ruffles Queso')">Ver más</button>
+        </article>
+
+    </div>
+</section>
+
+<section>
+    <h2>Sobre nosotros</h2>
+    <p>En Tienda PAVI presentamos diferentes productos Sabritas, conocidos por su sabor y variedad.</p>
+    <p>Nuestro objetivo es mostrar sus características de forma clara, sencilla y atractiva.</p>
+</section>
+
+</main>
+
+<footer>
+    <p>Contacto: tienda@email.com</p>
+    <p>&copy; 2026 Tienda PAVI</p>
+</footer>
+
+</body>
+</html>
